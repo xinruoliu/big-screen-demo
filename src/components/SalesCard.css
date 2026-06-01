@@ -1,0 +1,222 @@
+.sales-card {
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.95) 0%, rgba(10, 14, 26, 0.98) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.sales-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ffd700, #ff8c00, #ffd700);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.05), transparent, rgba(255, 215, 0, 0.05));
+}
+
+.ratio-badge {
+  padding: 6px 12px;
+  background: rgba(255, 215, 0, 0.15);
+  border-radius: 20px;
+  font-size: 12px;
+  color: #ffd700;
+  font-weight: 500;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  text-align: center;
+}
+
+.card-main {
+  padding: 24px;
+  text-align: center;
+  position: relative;
+}
+
+.card-main::before,
+.card-main::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3));
+}
+
+.card-main::before {
+  left: 40px;
+}
+
+.card-main::after {
+  right: 40px;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.main-value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+}
+
+.currency-symbol {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffd700;
+  background: linear-gradient(135deg, #ffd700, #ff8c00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.value-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: #ffd700;
+  font-family: 'Courier New', monospace;
+  text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.progress-section {
+  padding: 0 24px 16px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 8px;
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: visible;
+  position: relative;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #ffd700, #ff8c00);
+  border-radius: 4px;
+  transition: width 1s ease;
+  position: relative;
+}
+
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3));
+}
+
+.progress-glow {
+  position: absolute;
+  top: -4px;
+  width: 16px;
+  height: 16px;
+  background: #ffd700;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px #ffd700, 0 0 20px #ffd700;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 16px 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-icon {
+  font-size: 24px;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Courier New', monospace;
+}
+
+.stat-unit {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.5);
+  margin-left: 4px;
+}
+
+.stat-label {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.stat-changes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.change {
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 10px;
+}
+
+.change.up {
+  color: #10b981;
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.change.down {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.15);
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .value-number {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,58 @@
+.overview-panel {
+  background: linear-gradient(135deg, rgba(26, 31, 58, 0.9) 0%, rgba(10, 14, 26, 0.95) 100%);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 215, 0, 0.2);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.panel-header {
+  padding: 16px 20px;
+  background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), transparent);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffd700;
+  margin: 0;
+  padding-left: 12px;
+  border-left: 3px solid #ffd700;
+}
+
+.panel-content {
+  padding: 8px 0;
+}
+
+.overview-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  transition: background 0.2s ease;
+}
+
+.overview-item:hover {
+  background: rgba(255, 215, 0, 0.05);
+}
+
+.overview-item.even {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.overview-item.odd {
+  background: transparent;
+}
+
+.item-label {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.item-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffd700;
+  font-family: 'Courier New', monospace;
+}
